@@ -1,4 +1,4 @@
-package com.qiuweiping.chapter1;
+package com.qiuweiping.source.chapter1;
 
 import java.util.concurrent.Callable;
 

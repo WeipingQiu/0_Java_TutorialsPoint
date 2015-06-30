@@ -1,4 +1,4 @@
-package com.qiuweiping.chapter1;
+package com.qiuweiping.source.chapter1;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -7,13 +7,11 @@ import java.util.concurrent.Future;
 
 public class MyFirstJavaProgram {
 
-	static String msgForTask1 = "Hello";
-	static String msgForTask2 = " World";
-	
 	static int executorServicePoolSize = 2;
-	
-	
-	public static void main(String[] args) {
+		
+	public String retrieveMsg(String msgForTask1, String msgForTask2) {
+		
+		String result = "";
 		// Split the job into 2 pieces
 		DisplayMsgTask taskHello = new DisplayMsgTask(msgForTask1);
 		DisplayMsgTask taskWorld = new DisplayMsgTask(msgForTask2);
@@ -25,12 +23,12 @@ public class MyFirstJavaProgram {
 		Future<String> future2 = service.submit(taskWorld);
 		
 		try {
-			System.out.println(future1.get() + future2.get());
+			result = future1.get() + future2.get();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (ExecutionException e) {
 			e.printStackTrace();
 		}
-		
+		return result;
 	}
 }
