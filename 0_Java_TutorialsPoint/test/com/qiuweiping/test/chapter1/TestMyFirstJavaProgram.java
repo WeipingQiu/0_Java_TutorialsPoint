@@ -24,7 +24,7 @@ public class TestMyFirstJavaProgram {
 	private MyFirstJavaProgram myFirstJavaProgram = null;
 	
 	private static void trace(String value) {
-		// If necessary, validate the value
+		// If necessary, validate the value.
 		System.out.println(value);
 	}
 	
@@ -47,7 +47,6 @@ public class TestMyFirstJavaProgram {
 		myFirstJavaProgram = null;
 	}
 
-	@SuppressWarnings("deprecation")
 	@Test
 	public void test() {
 		String actual = myFirstJavaProgram.retrieveMsg(msg1, msg2);
