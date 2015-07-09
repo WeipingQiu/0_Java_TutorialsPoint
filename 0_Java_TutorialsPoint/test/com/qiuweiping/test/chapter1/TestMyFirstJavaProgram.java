@@ -16,6 +16,7 @@ import com.qiuweiping.source.chapter1.MyFirstJavaProgram;
  * @author Weiping Qiu
  *
  */
+
 public class TestMyFirstJavaProgram {
 
 	private String msg1 = "Hello";
